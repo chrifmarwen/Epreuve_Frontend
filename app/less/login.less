@@ -14,39 +14,37 @@
   -moz-box-shadow: 0px 2px 8px -2px rgba(0,0,0,0.75);
   box-shadow: 0px 2px 8px -2px rgba(0,0,0,0.75);
   margin-bottom: 5px;
-
-  .header_login {
-    background: @secondColor; /* For browsers that do not support gradients */
-    background: -webkit-linear-gradient(@secondColor, @firstColor); /* For Safari 5.1 to 6.0 */
-    background: -o-linear-gradient(@secondColor, @firstColor); /* For Opera 11.1 to 12.0 */
-    background: -moz-linear-gradient(@secondColor, @firstColor); /* For Firefox 3.6 to 15 */
-    background: linear-gradient(@secondColor, @firstColor); /* Standard syntax */
-    padding: 0;
-    height: 80px;
-  }
-  .login_banner_decoration {
-    height: 100%;
-  }
-  .login_logo {
-    width: 36%;
-    position: absolute;
-    top: 23%;
-    left: 4%;
-  }
-  .label_remember {
-    padding-top: 4px;
-  }
 }
-
 .col-centered{
   float: none;
   margin: 0 auto;
+}
+.header_login {
+  background: @secondColor; /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(@secondColor, @firstColor); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(@secondColor, @firstColor); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(@secondColor, @firstColor); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(@secondColor, @firstColor); /* Standard syntax */
+  padding: 0;
+  height: 80px;
+}
+.login_banner_decoration {
+  height: 100%;
+}
+.login_logo {
+  width: 36%;
+  position: absolute;
+  top: 23%;
+  left: 4%;
+}
+.label_remember {
+  padding-top: 4px;
 }
 
 // Login Responsive rules
 @media (min-width: @screen-sm-min) {
   .login_block {
-    margin-top: 10%;
+    margin-top: 15%;
   }
 }
 @media (max-width: @screen-sm-min) {
