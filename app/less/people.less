@@ -1,0 +1,65 @@
+@import "./color";
+
+.remove_btn_container {
+  margin-bottom: 15px;
+}
+
+.modal_add {
+  padding: 0;
+  border-radius: 0;
+  border: 10px solid @borderModalAdd;
+  position: fixed;
+  left: 0;
+  top: 25%;
+  z-index: 1;
+
+  .group {
+    margin-top: 5px;
+  }
+
+  .add_form {
+  }
+  .add_modal_title {
+    margin-bottom: 4%;
+    font-weight: 600;
+  }
+  .footer_modal_add {
+    margin-top: 5%;
+    padding: 15px;
+  }
+  .title_badge {
+    margin-bottom: 15px;
+    padding: 5px 12px 5px 12px;
+    border-radius: 3px;
+    width: 100%;
+    text-align: left;
+    color: black;
+    background: @lightGrey;
+  }
+  .label_line {
+    padding-top: 11px;
+  }
+}
+
+@media (min-width: @screen-sm-min) {
+  .open_add_modal_btn {
+    position: absolute;
+    right: 20px;
+    top: 3em;
+  }
+  .title_add_employee {
+    margin-bottom: 3em;
+  }
+}
+@media (max-width: @screen-sm-min) {
+  .open_add_modal_btn {
+    position: absolute;
+    right: 2.5em;
+    top: 2.7em;
+  }
+  .modal_add {
+    top: 0;
+    max-height: 100%;
+    overflow-y: auto;
+  }
+}

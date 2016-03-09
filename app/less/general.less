@@ -1,0 +1,183 @@
+@import "./color";
+
+// General style
+html,
+body {
+  margin:0;
+  padding:0;
+  height:100%;
+}
+
+body {
+  background-color:@whiteColor;
+  -webkit-font-smoothing: antialiased;
+  font: normal 14px Roboto,arial,sans-serif;
+
+  .container {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow: hidden;
+  }
+  .form-control {
+    font-size: 1.2rem;
+    border-radius: 3px;
+    background: -webkit-gradient(linear, center top, center bottom, color-stop(0%, @lightGrey), color-stop(80%, @whiteColor));
+    background: -moz-linear-gradient(top, @lightGrey, @whiteColor);
+    border:1px solid @greyBoxShaow;
+  }
+
+  .wrapper {
+    text-align: center;
+  }
+
+  // fix footer bottom
+  #container {
+    min-height:100%;
+    position:relative;
+  }
+  #header {
+    background: @secondColor;
+    background: -webkit-linear-gradient(@secondColor, @firstColor);
+    background: -o-linear-gradient(@secondColor, @firstColor);
+    background: -moz-linear-gradient(@secondColor, @firstColor);
+    background: linear-gradient(@secondColor, @firstColor);
+    .top_nav {
+      background-image: url('../image/banner_decoration.png');
+      background-size: auto 100%;
+      background-repeat: no-repeat;
+      margin-bottom: 1px;
+
+      -webkit-box-shadow: 0px 2px 8px -2px rgba(0,0,0,0.75);
+      -moz-box-shadow: 0px 2px 8px -2px rgba(0,0,0,0.75);
+      box-shadow: 0px 2px 8px -2px rgba(0,0,0,0.75);
+
+      .user_block {
+        text-align: right;
+        padding: 2.2rem;
+        color: white;
+      }
+      .logout_link {
+        color: white;
+        text-decoration: underline;
+      }
+      .logo {
+        width: 19rem;
+        padding: 2.2rem;
+      }
+    }
+    .nav  {
+      background: @thirdColor;
+      padding-left: 3%;
+      padding-right: 3%;
+      .btn {
+        float: left;
+      }
+    }
+  }
+  #body {
+    padding:10px;
+    padding-bottom:60px;   /* Height of the footer */
+  }
+  #footer {
+    margin-top: 20px;
+    position:absolute;
+    bottom:0;
+    width:100%;
+    height:30px;   /* Height of the footer */
+    border-top: 1px solid @darkGrey;
+    background: -webkit-linear-gradient(@lightGrey, @darkGrey); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(@lightGrey, @darkGrey); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(@lightGrey, @darkGrey); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(@lightGrey, @darkGrey); /* Standard syntax */
+    padding: 10px;
+  }
+
+  #content {
+    margin-bottom: 25px;
+  }
+
+  // Other
+  .under_construction_logo {
+    width: 30%;
+    margin: auto;
+  }
+
+  .list_block {
+    background-color: @listBackground;
+    padding: 5px 15px 15px 15px;
+    height: 100%;
+  }
+  .list_container {
+    min-height: 150px;
+    max-height: 20em;
+    overflow: auto;
+  }
+  .list_item {
+    cursor: pointer;
+    padding: 8px;
+  }
+  .list_item.selected {
+    background-color: @secondColor;
+    color: white;
+  }
+  .remove-btn {
+    float: right;
+    margin-right: 5px;
+    i {
+      color: @removeRed;
+    }
+
+    border-color: @blueColor;
+  }
+  .search_input {
+    width: 70%;
+  }
+  .list_title {
+    text-align: left;
+  }
+
+  .odd {
+    background-color: @listBackground;
+  }
+  .even {
+    background-color: @whiteColor;
+  }
+
+  .btn-separator:after {
+    content: ' ';
+    display: block;
+    float: left;
+    background: #ADADAD;
+    margin: 0 10px;
+    height: 34px;
+    width: 1px;
+  }
+}
+
+// General Responsive rules
+@media (min-width: @screen-sm-min) {
+  .toggler {
+    display: none;
+  }
+}
+@media (max-width: @screen-sm-min) {
+  .toggler {
+    font-size: 1.5em;
+    margin: 1em 1em 0.3em 0;
+    background: white;
+    padding: 8px;
+    border-radius: 3px;
+  }
+  .btn-nav {
+    width: 100%;
+  }
+  .nav {
+    height: 0;
+    overflow: hidden;
+  }
+  .nav.opened {
+    height: auto;
+    overflow: hidden;
+  }
+}

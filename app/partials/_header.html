@@ -1,0 +1,26 @@
+<div class="row top_nav">
+    <div class="col-md-10 col-xs-6" style="height: 100%; padding: 0;">
+        <img src="image/logo.png" class="img-responsive logo"/>
+    </div>
+    <div class="col-md-2 col-xs-5 user_block">
+        <div class="col-md-12">Welcome {{ currentUser.username }}</div>
+        <div class="col-md-12">
+            <a ui-sref="logout" class="logout_link" ui-sref="logout">Logout</a>
+        </div>
+    </div>
+    <div class="col-xs-1">
+        <button ng-click="toggleMenu()" class="btn fa fa-bars pull-right toggler" style="margin-left5px; font-size: 1.5em;"></button>
+    </div>
+</div>
+<nav class="row nav" ng-class="{ 'opened': toggled}" style="">
+    <a class="btn btn-nav" ng-class="{ 'active': uiRouterState.current.name == 'root.home' }"
+       ui-sref="root.home">Demo's home</a>
+    <a class="btn btn-nav" ng-class="{ 'active': uiRouterState.current.name == 'root.people_directory' }"
+       ui-sref="root.people_directory">People directory</a>
+    <a class="btn btn-nav" ui-sref="root.jobs_manager"
+       ng-class="{ 'active': uiRouterState.current.name == 'root.jobs_manager' }">
+        Jobs manager</a>
+    <a class="btn btn-nav" ui-sref="root.statistics"
+       ng-class="{ 'active': uiRouterState.current.name == 'root.statistics' }">
+        Statistics</a>
+</nav>

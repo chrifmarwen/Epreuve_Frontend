@@ -1,0 +1,46 @@
+<div id="content" ng-controller="LoginController" class="container">
+    <div class="row">
+        <div class="col-centered col-md-5 col-xs-12 login_block">
+            <div class="col-md-12 header_login">
+                <img src="image/banner_decoration.png" class="img-responsive login_banner_decoration" />
+                <img src="image/logo.png" class="img-responsive login_logo" />
+            </div>
+            <form novalidate name="form" ng-submit="" class="col-md-12 form-horizontal form-login">
+                <br/>
+                <div class="form-group" ng-class="{ 'has-error': form.username.$dirty && form.username.$error.required }">
+                    <label for="login" class="col-sm-3 control-label">Login :</label>
+                    <div class="col-sm-9">
+                        <input type="text" name="username" class="form-control" id="login" ng-model="loginObj.username" required>
+                        <span ng-show="form.username.$dirty && form.username.$error.required" class="help-block">Username is required</span>
+                    </div>
+                </div>
+                <div class="form-group" ng-class="{ 'has-error': form.password.$dirty && form.password.$error.required }">
+                    <label for="password" class="col-sm-3 control-label">Password :</label>
+                    <div class="col-sm-9">
+                        <input type="password" class="form-control" id="password" name="password" ng-model="loginObj.password" required>
+                        <span ng-show="form.password.$dirty && form.password.$error.required" class="help-block">Password is required</span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-sm-offset-3 col-sm-9">
+                        <div class="checkbox">
+                            <input type="checkbox" ng-model="loginObj.rememberMe" id="remember" /><label class="label_remember" for="remember">Remember me</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-sm-offset-9 col-sm-3">
+                        <button type="submit" ng-click="signin()" ng-disabled="form.$invalid" class="btn btn-default">Log in >></button>
+                    </div>
+                </div>
+            </form>
+            <a class="text-muted"> {{ test }}
+ Forgotten your password ?</a> <span style="font-weight: bold;">Request a new one.</span>
+        </div>
+
+    </div>
+</div>
+
+<footer id="footer" class="footer">
+
+</footer>

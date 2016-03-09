@@ -1,0 +1,15 @@
+<div class="list_block panel panel-default">
+    <h4 class="list_title">{{ ngTitle }}</h4>
+    <input class="form-control search_input" ng-model="searchkey" placeholder="Search a {{ ngTitle }}..."/>
+    <br/>
+
+    <div class="list_container panel panel-default">
+        <div ng-repeat="item in ngModel| filter: {name: searchkey}"
+             class="list_item"
+             ng-class="{ 'selected': item.id == ngSelectedItem.id }"
+             ng-class-odd="'odd'" ng-class-even="'even'"
+             ng-click="ngSelect({item: item})">
+            {{ item.name }}
+        </div>
+    </div>
+</div>
